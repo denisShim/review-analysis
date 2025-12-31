@@ -6,18 +6,6 @@ from sqlalchemy import create_engine
 
 engine = create_engine('postgresql://denisimac27:123456@localhost:5432/review_analysis')
 
-try:
-    conn = psycopg2.connect(
-        host="ваш_хост_elephant",
-        database="ваша_бд",
-        user="ваш_юзер",
-        password="ваш_пароль"
-    )
-    print("✅ PostgreSQL подключен успешно!")
-    conn.close()
-except Exception as e:
-    print(f"❌ PostgreSQL ошибка: {e}")
-
 # Настройка страницы
 st.set_page_config(page_title="Анализ отзывов (PostgreSQL)", layout="wide")
 st.title("📊 Анализ отзывов - PostgreSQL версия")

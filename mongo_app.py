@@ -4,13 +4,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from datetime import datetime
 
-try:
-    client = MongoClient("ваша_строка_mongodb")
-    client.server_info()
-    print("✅ MongoDB подключен успешно!")
-except Exception as e:
-    print(f"❌ MongoDB ошибка: {e}")
-
 # Настройка страницы
 st.set_page_config(page_title="Анализ отзывов (MongoDB)", layout="wide")
 st.title("📊 Анализ отзывов - MongoDB версия")
